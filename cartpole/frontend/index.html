@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CartPole Environment</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+        canvas, img {
+            border: 2px solid black;
+            margin-top: 20px;
+        }
+        .controls {
+            margin-top: 20px;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            margin: 5px;
+        }
+        .status {
+            margin-top: 20px;
+            font-size: 18px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1>CartPole Environment</h1>
+    <div>
+        <img id="gameCanvas" alt="Game environment will appear here" width="600" height="400">
+    </div>
+
+    <div class="status" id="status">Press "Start Game" to begin 🎮</div>
+    <div class="status" id="lastMove">Last Move: None</div>
+
+    <div class="controls">
+        <button onclick="startGame()">Start Game</button>
+        <button onclick="resetGame()">Reset Game</button>
+        <button onclick="takeAction(0)">Move Left</button>
+        <button onclick="takeAction(1)">Move Right</button>
+    </div>
+
+    <script src="script.js" defer></script>
+</body>
+</html>
